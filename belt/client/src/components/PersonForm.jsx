@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import Dropdown from 'react-bootstrap/Dropdown';
-
+import {Link} from "react-router-dom";
 const PersonForm =props => {
     
     const [name, setName] = useState(""); 
@@ -34,7 +33,9 @@ const PersonForm =props => {
         < div style={{backgroundColor: "orange"}}>
         <div style={{display:'flex' , justifyContent:'space-evenly' , backgroundColor: "brown"}}>
             <h1> Add Pirate</h1>
+            <Link to={"/people/"}>
             <button style={{backgroundColor: " rgb(16, 93, 182)"}}>Crew Board</button>
+            </Link>
         </div>
 
         <form onSubmit={onSubmitHandler}>
@@ -56,13 +57,13 @@ const PersonForm =props => {
                 <input type="text" onChange={e=>setCatchs(e.target.value)} value={catchs}/>
             </p>
             <p>
-                <label for="cars">Choose a car:</label>
+                <label for="Crews">Crew Position:</label>
 
-                <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+                <select name="Crews" id="Crews">
+                <option value="First Mate">First Mate</option>
+                <option value="Quarter Master">Quarter Master</option>
+                <option value="Boatswain">Boatswain</option>
+                <option value="Powder Monkey">Powder Monkey</option>
                 </select>
             </p>
             <input type="submit" value="Add Pirate" style={{backgroundColor: " rgb(16, 93, 182)"}}/>

@@ -2,23 +2,19 @@ const mongoose = require('mongoose');
 const PersonSchema = new mongoose.Schema({
     name: { 
         type: String,
-		required: [true, "name is required"],
-		minlength:[3,"name min length is 3"] 
+		required: [true, "name is required"]
     },
     img: { 
         type: String,
-		required: [true, "name is required"],
-		minlength:[3,"name min length is 3"] 
+		required: [true, "img is required"]
     },
     num: { 
 		type: Number,
-		required:[true, "age is required"],
-		min:[3,"age min age is 3"]
+		required:[true, "num is required"]
     },
     catchs: { 
         type: String,
-		required: [true, "name is required"],
-		minlength:[3,"name min length is 3"]
+		required: [true, "catchs is required"]
     },
 
 }, { timestamps: true });
