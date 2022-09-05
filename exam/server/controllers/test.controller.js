@@ -13,3 +13,9 @@ module.exports.create=(request,response)=>{
     .then(test=>response.json(test))
     .catch(err=>response.json(err))
 }
+
+module.exports.getAllElements = (request, response) => {
+    Test.find({})
+    .then(test=>response.json(test))
+    .catch(err=>response.json(err))
+}
