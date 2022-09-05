@@ -7,7 +7,7 @@ const Pokemon = () => {
         axios.get('https://pokeapi.co/api/v2/pokemon/?limit=807').then(response=>{
             console.log(response);
         })
-    }//delete it if it doesn't work
+    }
 
     return (
 
