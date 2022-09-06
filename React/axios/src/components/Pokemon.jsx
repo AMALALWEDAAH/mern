@@ -20,4 +20,3 @@ const Pokemon = (props) => {
     );
 }
 export default Pokemon;
-
